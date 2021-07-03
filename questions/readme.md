@@ -17,11 +17,11 @@ I will obfuscate specific details from the bug report as appropriate.
 
 
 # Bug report:
-Title: Customer responses to Sequences are failing to reach VA Portal with error: “<integer> is not of type 'string'”
+Title: Customer responses to Sequences are failing to reach VA Portal with error: “`integer` is not of type 'string'”
 
-Environment: <release testing environment>
-Example credentials to reproduce: <example credentials>
-Example sequence to opt in to: <Sequence name>
+Environment: `release testing environment`
+Example credentials to reproduce: `example credentials`
+Example sequence to opt in to: `Sequence name`
 
 Reproduction steps:
 1) Create a new Sequence or opt in to an existing one.
@@ -31,14 +31,14 @@ Expected result:
 The Sequence reply will be shown in the VA Portal.
 
 Actual result:
-Sequence replies are not reaching the VA Portal. An error is logged in Sentry, “<integer> is not of type 'string'”.
+Sequence replies are not reaching the VA Portal. An error is logged in Sentry, “`integer` is not of type 'string'”.
 
 Logs:
-<Error log>
-<Link to error in Sentry>
+`Error log`
+`Link to error in Sentry`
 
 Additional Notes:
-In ticket <ticket number>, we updated the ID column for the Experiences table <experiences table name> from int to UUID. To make VA Portal work with this change, we changed the code to cast UUIDs to string. We did not update any code for Sequences or the Sequences table <sequences table name>, which still has type int for its ID.
+In ticket `ticket number`, we updated the ID column for the Experiences table `experiences table name` from int to UUID. To make VA Portal work with this change, we changed the code to cast UUIDs to string. We did not update any code for Sequences or the Sequences table `sequences table name`, which still has type int for its ID.
 
 
 
